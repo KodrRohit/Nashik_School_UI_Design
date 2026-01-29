@@ -2290,7 +2290,7 @@ nav ul li:hover::after {
 
 @media(max-width:768px) {
       nav ul img {
-        display: block;
+        display: none;
         width: 100px;
         margin-bottom: 20px;
     }
@@ -2597,4 +2597,5 @@ nav ul li:hover::after {
     .navv.next {
         right: 8px;
     }
+
 }
