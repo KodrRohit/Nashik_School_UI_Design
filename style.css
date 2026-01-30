@@ -202,6 +202,176 @@ nav ul li:hover::after {
 }
 
 
+.bento-container {
+    /* max-width: 1300px; */
+    width: 100%;
+    padding: 40px 2.5%;
+   background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+  
+}
+
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 160px;
+    gap: 20px;
+}
+
+
+.bento-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    text-decoration: none;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid #8c8c8c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+    border-color: #85bdf2;
+}
+
+
+.card-img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.bento-card:hover .card-img {
+    transform: scale(1.1);
+}
+
+
+.span-2-w {
+    grid-column: span 2;
+}
+
+.span-2-h {
+    grid-row: span 2;
+}
+
+.large {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+
+.large .card-img {
+    width: 180px;
+    height: 180px;
+}
+
+.span-2-h .card-img {
+    width: 80px;
+    height: 80px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.subtitl {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 180px; /* Rows chi height thodi vadhavli */
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .bento-grid {
+        grid-template-columns: 1fr; /* Ekdam lahan mobile var 1 column */
+    }
+    .wide-mobile {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* --- Responsive Fix --- */
+
+@media (max-width: 768px) {
+    .bento-grid {
+        /* Mobile var 2 columns cha base thevla */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-auto-rows: minmax(140px, auto); 
+        gap: 12px;
+        padding: 10px;
+    }
+
+    
+    .large, .span-2-w, .span-2-h {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        height: auto;
+    }
+
+   
+    .wide-mobile {
+        grid-column: span 2 !important; 
+        flex-direction: row; 
+        text-align: left;
+        padding: 15px;
+        align-items: center;
+        gap: 15px;
+    }
+
+    
+    .card-img {
+        width: 50px !important;
+        height: 50px !important;
+        margin-bottom: 8px;
+    }
+
+    
+    .title {
+        font-size: 0.9rem;
+    }
+
+    .subtitl {
+        font-size: 0.75rem;
+        display: block; 
+    }
+}
+
+
+@media (max-width: 400px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 8px;
+    }
+    
+    .title {
+        font-size: 0.8rem;
+    }
+}
+
+
+
 /* ================= PAGE 2 ================= */
 
 .about-section {
@@ -2599,3 +2769,4 @@ nav ul li:hover::after {
     }
 
 }
+
