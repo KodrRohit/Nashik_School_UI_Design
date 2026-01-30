@@ -76,7 +76,8 @@ header .btns button {
 nav {
     width: 100%;
     /* background-color: red; */
-    position: fixed;
+    /* position: fixed; */
+    position: relative;
     z-index: 50;
 }
 
@@ -2769,4 +2770,5 @@ nav ul li:hover::after {
     }
 
 }
+
 
