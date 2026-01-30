@@ -268,7 +268,7 @@ nav ul li:hover::after {
 
 .large {
     grid-column: span 1;
-    grid-row: span 3;
+    grid-row: span 2;
 }
 
 
@@ -2801,3 +2801,4 @@ nav ul li:hover::after {
         right: 8px;
     }
 }
+
